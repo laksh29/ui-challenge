@@ -4,38 +4,18 @@ import 'package:super_extensions/super_extensions.dart';
 import 'package:ui_challenge/constants/color_constants.dart';
 import 'package:ui_challenge/constants/sizedbox_constants.dart';
 
-import '../constants/assets_constants.dart';
 import '../ui components/banner.dart';
 import '../ui components/display_card.dart';
 import '../ui components/search_bar.dart';
 import '../ui components/title_tile.dart';
 
-class HomePage extends ConsumerWidget {
-  const HomePage({super.key});
+class HomeScreen extends ConsumerWidget {
+  const HomeScreen({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final screenWidth = context.screenWidth;
     return Scaffold(
       backgroundColor: ColorConstant.background,
-      appBar: AppBar(
-        backgroundColor: ColorConstant.background,
-        title: const Padding(
-          padding: EdgeInsets.only(left: 20.0),
-          child: Image(
-            image: AssetImage(AssetsConstant.logo),
-            height: 25,
-          ),
-        ),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                Icons.notifications_none_sharp,
-                color: ColorConstant.black,
-              )),
-          buildWidth(25),
-        ],
-      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30.0),
         child: ListView(
