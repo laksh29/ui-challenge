@@ -1,3 +1,3 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final screenWidthProvider = StateProvider((ref) => 1.0);
+final bottomNavIndex = StateProvider<int>((ref) => 0);
