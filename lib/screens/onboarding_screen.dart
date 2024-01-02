@@ -4,7 +4,7 @@ import 'package:ui_challenge/constants/assets_constants.dart';
 import 'package:ui_challenge/constants/color_constants.dart';
 import 'package:ui_challenge/constants/sizedbox_constants.dart';
 import 'package:ui_challenge/constants/text%20style/text_style.dart';
-import 'package:ui_challenge/screens/home_screen.dart';
+import 'package:ui_challenge/screens/bottom_nav.dart';
 
 class OnboardingScreen extends ConsumerWidget {
   const OnboardingScreen({super.key});
@@ -75,7 +75,7 @@ class OnboardingScreen extends ConsumerWidget {
               onTap: () => Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const HomePage(),
+                  builder: (context) => const BottomNav(),
                 ),
                 (route) => false,
               ),
