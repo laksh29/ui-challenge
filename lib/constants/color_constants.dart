@@ -5,7 +5,7 @@ class ColorConstant {
   static const primaryColor = Color(0xff3FB6BE);
   static const secondaryColor = Color(0xffF3A817);
   static const grey = Color(0xffE1E1E1);
-  static const starYellow = Color(0xffF8B958);
+  static const starYellow = Color(0xffFCD59C);
   static const white = Colors.white;
   static const lightWhite = Colors.white70;
   static const black = Colors.black;
