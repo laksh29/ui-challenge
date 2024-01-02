@@ -48,21 +48,29 @@ class BottomNav extends ConsumerWidget {
         currentIndex: count,
         onTap: (index) =>
             ref.read(bottomNavIndex.notifier).update((state) => index),
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_rounded),
+            icon: count == 0
+                ? const Icon(Icons.home_rounded)
+                : const Icon(Icons.home_outlined),
             label: "Home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border_rounded),
+            icon: count == 1
+                ? const Icon(Icons.favorite_rounded)
+                : const Icon(Icons.favorite_border_rounded),
             label: "Favorite",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings_outlined),
+            icon: count == 2
+                ? const Icon(Icons.settings)
+                : const Icon(Icons.settings_outlined),
             label: "Setting",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline_rounded),
+            icon: count == 3
+                ? const Icon(Icons.person)
+                : const Icon(Icons.person_outline_rounded),
             label: "Profile",
           ),
         ],
