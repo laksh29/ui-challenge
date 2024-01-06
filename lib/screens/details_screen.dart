@@ -135,22 +135,12 @@ class DetailsScreen extends ConsumerWidget {
                 IconButton(
                     highlightColor: Colors.transparent,
                     onPressed: () {
-                      if (ref.watch(heartPressed)[index]) {
-                        ref.read(heartPressed.notifier).update((state) {
-                          state[index] = false;
-                          return state;
-                        });
-
+                      if (ref.watch(likeController).contains(index)) {
                         ref.read(likeController.notifier).update((state) => [
                               for (int x in state)
                                 if (x != index) x
                             ]);
                       } else {
-                        ref.read(heartPressed.notifier).update((state) {
-                          state[index] = true;
-                          return state = state;
-                        });
-
                         ref
                             .read(likeController.notifier)
                             .update((state) => [...state, index]);
