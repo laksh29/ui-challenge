@@ -158,7 +158,7 @@ class DetailsScreen extends ConsumerWidget {
             ),
           ),
           buildHeight(30),
-          // description
+          // description - title
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
