@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:ui_challenge/providers/providers.dart';
 import 'package:ui_challenge/screens/does_not_exists_screen.dart';
 import 'package:ui_challenge/screens/home_screen.dart';
+import 'package:ui_challenge/screens/profile_screen.dart';
 
 import '../constants/assets_constants.dart';
 import '../constants/color_constants.dart';
@@ -19,7 +20,7 @@ class BottomNav extends ConsumerWidget {
       const HomeScreen(),
       const FavoriteScreen(),
       const DoesNotExists(),
-      const DoesNotExists(),
+      const ProfileScreen(),
     ];
     return Scaffold(
       backgroundColor: ColorConstant.background,
