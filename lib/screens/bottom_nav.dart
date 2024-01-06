@@ -7,6 +7,7 @@ import 'package:ui_challenge/screens/home_screen.dart';
 import '../constants/assets_constants.dart';
 import '../constants/color_constants.dart';
 import '../constants/sizedbox_constants.dart';
+import 'favorite_screen.dart';
 
 class BottomNav extends ConsumerWidget {
   const BottomNav({super.key});
@@ -16,7 +17,7 @@ class BottomNav extends ConsumerWidget {
     int count = ref.watch(bottomNavIndex);
     final List screens = [
       const HomeScreen(),
-      const DoesNotExists(),
+      const FavoriteScreen(),
       const DoesNotExists(),
       const DoesNotExists(),
     ];
