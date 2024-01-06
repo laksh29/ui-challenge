@@ -6,6 +6,8 @@ import 'package:ui_challenge/constants/sizedbox_constants.dart';
 import 'package:ui_challenge/constants/text%20style/text_style.dart';
 import 'package:ui_challenge/screens/bottom_nav.dart';
 
+import '../ui components/custom_button.dart';
+
 class OnboardingScreen extends ConsumerWidget {
   const OnboardingScreen({super.key});
 
@@ -71,7 +73,7 @@ class OnboardingScreen extends ConsumerWidget {
             ),
             // Next Button
             buildHeight(25),
-            InkWell(
+            CustomButton(
               onTap: () => Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
@@ -79,28 +81,18 @@ class OnboardingScreen extends ConsumerWidget {
                 ),
                 (route) => false,
               ),
-              child: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 13,
-                  vertical: 5,
-                ),
-                decoration: BoxDecoration(
-                  color: ColorConstant.primaryColor,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    // cta text
-                    Text("Next",
-                        style: UiTextStyle.heading.extraSmall.copyWith(
-                          color: ColorConstant.white,
-                        )),
-                    buildWidth(8),
-                    // arrow icon
-                    const Image(image: AssetImage(AssetsConstant.arrow))
-                  ],
-                ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // cta text
+                  Text("Next",
+                      style: UiTextStyle.heading.extraSmall.copyWith(
+                        color: ColorConstant.white,
+                      )),
+                  buildWidth(8),
+                  // arrow icon
+                  const Image(image: AssetImage(AssetsConstant.arrow))
+                ],
               ),
             ),
             // Images
