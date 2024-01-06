@@ -22,6 +22,7 @@ class BottomNav extends ConsumerWidget {
       const DoesNotExists(),
     ];
     return Scaffold(
+      backgroundColor: ColorConstant.background,
       appBar: AppBar(
         backgroundColor: ColorConstant.background,
         surfaceTintColor: ColorConstant.background,
