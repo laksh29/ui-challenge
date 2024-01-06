@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ui_challenge/constants/text%20style/text_style.dart';
 import 'package:ui_challenge/providers/providers.dart';
 import 'package:ui_challenge/screens/does_not_exists_screen.dart';
 import 'package:ui_challenge/screens/home_screen.dart';
 import 'package:ui_challenge/screens/profile_screen.dart';
+import 'package:ui_challenge/ui%20components/custom_alert.dart';
 
 import '../constants/assets_constants.dart';
 import '../constants/color_constants.dart';
@@ -36,7 +38,19 @@ class BottomNav extends ConsumerWidget {
         ),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () => showDialog(
+                  context: context,
+                  builder: (context) => CustomAlert(
+                        content: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              "No Pending Notification!",
+                              style: UiTextStyle.title.large,
+                            )
+                          ],
+                        ),
+                      )),
               icon: const Icon(
                 Icons.notifications_none_sharp,
                 color: ColorConstant.black,
