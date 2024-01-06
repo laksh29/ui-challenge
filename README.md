@@ -1,16 +1,13 @@
-# ui_challenge
+# UI Challenge
 
-A new Flutter project.
+[Hey Flutter]() coding challenge #3.
+Have to develop a **Real Estate Application**
 
-## Getting Started
+### UI Provided
 
-This project is a starting point for a Flutter application.
+![UI of the Application](https://github.com/laksh29/ui-challenge/assets/81346526/51b7f452-0743-4b9b-a38e-d20afdddd80c)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Tech Stack
+- Flutter
+- Riverpod
