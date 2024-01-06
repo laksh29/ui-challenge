@@ -134,10 +134,29 @@ class DetailsScreen extends ConsumerWidget {
                 // like button
                 IconButton(
                     highlightColor: Colors.transparent,
-                    onPressed: () => ref
-                        .read(heartPressed.notifier)
-                        .update((state) => !state),
-                    icon: ref.watch(heartPressed)
+                    onPressed: () {
+                      if (ref.watch(heartPressed)[index]) {
+                        ref.read(heartPressed.notifier).update((state) {
+                          state[index] = false;
+                          return state;
+                        });
+
+                        ref.read(likeController.notifier).update((state) => [
+                              for (int x in state)
+                                if (x != index) x
+                            ]);
+                      } else {
+                        ref.read(heartPressed.notifier).update((state) {
+                          state[index] = true;
+                          return state = state;
+                        });
+
+                        ref
+                            .read(likeController.notifier)
+                            .update((state) => [...state, index]);
+                      }
+                    },
+                    icon: ref.watch(likeController).contains(index)
                         ? const Icon(
                             Icons.favorite,
                             color: Colors.red,
