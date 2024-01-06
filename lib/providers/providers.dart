@@ -5,3 +5,5 @@ final bottomNavIndex = StateProvider<int>((ref) => 0);
 final searchController = StateProvider<String>((ref) => "");
 
 final likeController = StateProvider<List<int>>((ref) => []);
+
+final nameProvider = StateProvider<String>((ref) => "Full Name");
